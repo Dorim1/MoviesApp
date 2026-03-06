@@ -15,6 +15,9 @@ coil = "2.7.0"
 pager = "0.36.0"
 googleGmsGoogleServices = "4.4.4"
 firebaseDatabase = "22.0.1"
+appcompat = "1.7.1"
+material = "1.13.0"
+activity = "1.12.4"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -39,6 +42,9 @@ compose-foundation = { group = "androidx.compose.foundation", name = "foundation
 accompanist-pager = { group = "com.google.accompanist", name = "accompanist-pager", version.ref = "pager" }
 accompanist-pager-indicators = { group = "com.google.accompanist", name = "accompanist-pager-indicators", version.ref = "pager"}
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 
 
 [plugins]
