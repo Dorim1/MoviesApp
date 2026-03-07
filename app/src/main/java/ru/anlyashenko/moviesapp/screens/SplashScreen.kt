@@ -1,8 +1,5 @@
-package ru.anlyashenko.moviesapp
+package ru.anlyashenko.moviesapp.screens
 
-import android.os.Bundle
-import androidx.activity.compose.setContent
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -33,25 +30,15 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import ru.anlyashenko.moviesapp.R
 import ru.anlyashenko.moviesapp.ui.theme.blackBackground
 import ru.anlyashenko.moviesapp.ui.theme.green
 import ru.anlyashenko.moviesapp.ui.theme.pink
 
-class SplashActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        setContent {
-            IntroScreen(onGetInClick = {
-
-            } )
-        }
-    }
-}
 
 @Composable
 @Preview
-fun IntroScreenPreview() {
+private fun IntroScreenPreview() {
     IntroScreen(
         onGetInClick = {}
     )
