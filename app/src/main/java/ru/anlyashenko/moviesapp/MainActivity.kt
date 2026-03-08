@@ -12,10 +12,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import dagger.hilt.android.AndroidEntryPoint
+import ru.anlyashenko.moviesapp.navigation.Screen
 import ru.anlyashenko.moviesapp.screens.IntroScreen
 import ru.anlyashenko.moviesapp.screens.LoginScreen
 import ru.anlyashenko.moviesapp.ui.theme.MoviesAppTheme
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,21 +54,5 @@ fun AppNavigation() {
                 onLoginClick = { navController.navigate(Screen.Login.route) }
             )
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MoviesAppTheme {
-        Greeting("Android")
     }
 }
