@@ -5,6 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -51,8 +53,22 @@ fun AppNavigation() {
 
         composable(Screen.Login.route) {
             LoginScreen(
-                onLoginClick = { navController.navigate(Screen.Login.route) }
+                onLoginClick = { navController.navigate(Screen.Home.route) }
             )
+        }
+
+        composable(Screen.Home.route) {
+            // заглушка пока нет экрана
+            Box(modifier = Modifier.fillMaxSize()) { Text("Home") }
+        }
+        composable(Screen.Profile.route) {
+            Box(modifier = Modifier.fillMaxSize()) { Text("Profile") }
+        }
+        composable(Screen.Support.route) {
+            Box(modifier = Modifier.fillMaxSize()) { Text("Support") }
+        }
+        composable(Screen.Settings.route) {
+            Box(modifier = Modifier.fillMaxSize()) { Text("Settings") }
         }
     }
 }
