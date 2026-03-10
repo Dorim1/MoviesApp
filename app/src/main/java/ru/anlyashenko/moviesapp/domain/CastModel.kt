@@ -1,12 +1,12 @@
 package ru.anlyashenko.moviesapp.domain
 
 import android.os.Parcelable
+import com.google.firebase.database.PropertyName
 import kotlinx.parcelize.Parcelize
 import kotlinx.serialization.Serializable
 
-@Serializable
 @Parcelize
 data class CastModel(
-    val picUrl: String = "",
-    val actor: String = "",
+    @PropertyName("Actor") val actor: String = "",
+    @PropertyName("PicUrl") val picUrl: String = ""
 ) : Parcelable

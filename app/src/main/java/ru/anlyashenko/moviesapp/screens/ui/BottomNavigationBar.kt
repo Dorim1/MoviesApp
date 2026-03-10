@@ -1,4 +1,4 @@
-package ru.anlyashenko.moviesapp.screens
+package ru.anlyashenko.moviesapp.screens.ui
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.height
@@ -8,7 +8,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.BottomAppBar
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material3.Icon
-import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -22,8 +21,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.bumptech.glide.load.resource.bitmap.CircleCrop
-import org.w3c.dom.Text
 import ru.anlyashenko.moviesapp.R
 import ru.anlyashenko.moviesapp.navigation.Screen
 import ru.anlyashenko.moviesapp.ui.theme.black3

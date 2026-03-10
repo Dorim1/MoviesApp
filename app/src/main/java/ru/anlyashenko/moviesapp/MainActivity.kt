@@ -15,9 +15,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
+import ru.anlyashenko.moviesapp.domain.FilmItemModel
 import ru.anlyashenko.moviesapp.navigation.Screen
+import ru.anlyashenko.moviesapp.screens.DetailScreen
 import ru.anlyashenko.moviesapp.screens.IntroScreen
 import ru.anlyashenko.moviesapp.screens.LoginScreen
+import ru.anlyashenko.moviesapp.screens.MainScreen
 import ru.anlyashenko.moviesapp.ui.theme.MoviesAppTheme
 
 @AndroidEntryPoint
@@ -58,9 +61,28 @@ fun AppNavigation() {
         }
 
         composable(Screen.Home.route) {
-            // заглушка пока нет экрана
-            Box(modifier = Modifier.fillMaxSize()) { Text("Home") }
+            MainScreen(
+                onItemClick = { film ->
+                    navController.currentBackStackEntry
+                        ?.savedStateHandle
+                        ?.set("film", film)
+                    navController.navigate(Screen.Detail.route)
+                }
+            )
         }
+
+        composable(Screen.Detail.route) {
+                val film = navController.previousBackStackEntry
+                    ?.savedStateHandle
+                    ?.get<FilmItemModel>("film")
+            film?.let {
+                DetailScreen(
+                    film = film,
+                    onBackClick = { navController.popBackStack()}
+                )
+            }
+        }
+
         composable(Screen.Profile.route) {
             Box(modifier = Modifier.fillMaxSize()) { Text("Profile") }
         }

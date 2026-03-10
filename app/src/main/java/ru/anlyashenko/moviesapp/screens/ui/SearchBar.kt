@@ -1,4 +1,4 @@
-package ru.anlyashenko.moviesapp.screens
+package ru.anlyashenko.moviesapp.screens.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
-import androidx.compose.material.TextField
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
@@ -24,7 +23,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.google.android.material.search.SearchBar
 import ru.anlyashenko.moviesapp.R
 
 @Composable

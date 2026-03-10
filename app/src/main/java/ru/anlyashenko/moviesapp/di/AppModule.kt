@@ -15,6 +15,6 @@ object AppModule {
     @Provides
     @Singleton
     fun provideFirebaseDatabase(): FirebaseDatabase {
-        return FirebaseDatabase.getInstance()
+        return FirebaseDatabase.getInstance("https://moviesapp-8f24a-default-rtdb.europe-west1.firebasedatabase.app/")
     }
 }

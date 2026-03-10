@@ -16,7 +16,7 @@ class MainRepository @Inject constructor(
 ) {
 
     fun loadUpcoming(): Flow<List<FilmItemModel>> = callbackFlow {
-        val ref = firebaseDatabase.getReference("Upcoming")
+        val ref = firebaseDatabase.getReference("Upcomming")
 
         val listener = object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
